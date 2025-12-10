@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Technologie du Web - Exercices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Technologie du Web — Javascript</h1>
+</header>
+
+<nav id="menu">
+    <h2>Menu</h2>
+    <label><input type="checkbox" id="showConvert" /> Convertisseur de devises</label><br>
+    <label><input type="checkbox" id="showForm" /> Formulaire / Lien et images</label><br>
+    <label><input type="checkbox" id="showProgress" /> Barres de progression</label>
+</nav>
+
+<main>
+    <!-- Convertisseur -->
+    <section id="convertSection" class="panel">
+        <h2>I. Convertisseur de devises</h2>
+
+        <article id="conv1" class="card">
+            <h3>1. Première version</h3>
+
+            <table class="convTable" border="1">
+                <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Devise</th>
+                    <th>Montant</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="icon">
+                        <img src="images/euro.png" alt="€" />
+                    </td>
+
+                    <td>Euros</td>
+                    <td><input id="euro1" type="number" value="10" /></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <img src="images/dollar.png" alt="€" />
+                    </td>
+
+                    <td>Dollar Américain</td>
+                    <td><input id="usd1" type="number" disabled /></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <img src="images/austra.png" alt="€" />
+                    </td>
+
+                    <td>Dollar Australien</td>
+                    <td><input id="aud1" type="number" disabled /></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button id="convertir1" class="convertButton">Convertir</button>
+        </article>
+
+        <article id="conv2" class="card">
+            <h3>2. Seconde version</h3>
+
+            <table class="convTable" border="1">
+                <thead>
+                <tr>
+                    <th>Symbole</th>
+                    <th>Devise</th>
+                    <th>Montant</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="icon">
+                        <img src="images/euro.png" alt="€" />
+                    </td>
+
+                    <td>Euros</td>
+                    <td><input id="euro2" type="number" value="10" /></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <img src="images/dollar.png" alt="€" />
+                    </td>
+
+                    <td>Dollar Américain</td>
+                    <td><input id="usd2" type="number" disabled /></td>
+                </tr>
+                <tr>
+                    <td class="icon">
+                        <img src="images/austra.png" alt="€" />
+                    </td>
+
+                    <td>Dollar Australien</td>
+                    <td><input id="aud2" type="number" disabled /></td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <!-- Formulaire / Lien et images + Progress bars -->
+    <section id="formSection" class="panel">
+        <h2>II. Formulaires</h2>
+
+        <article id="linkImages">
+            <div class="formBox">
+                <h3>Lien et images</h3>
+                <p><a id="wikipediaLink" href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" target="_blank">La page principale de Wikipedia (FR)</a></p>
+
+                <!-- Cadre Google -->
+                <div class="googleBox">
+                    <img src="images/google.png"  alt="Google" width="180" />
+                    <hr />
+                    <label for="ouiNonInput">Premiers pas avec Javascript</label><br>
+                    <input id="ouiNonInput" type="text" placeholder="Oui ou Non" />
+                    <button id="checkOuiNon">Vérifier</button>
+                    <hr />
+                </div>
+
+                <div id="ouiNonFeedback" class="feedback"></div>
+
+                <fieldset id="choicesField">
+                    <legend>Choix</legend>
+                    <label><input type="radio" name="choix" value="1" /> HP</label>
+                    <label><input type="radio" name="choix" value="2" /> Casque</label>
+                    <label><input type="radio" name="choix" value="3" /> Bluetooth</label>
+                </fieldset>
+
+                <div class="volumeRow">
+                    <label id="volumeLabel">Volume</label><br>
+                    <input id="volume" type="range" min="0" max="100" value="0" />
+                    <div id="volumeValue">0</div>
+                </div>
+
+                <label><input type="checkbox" id="muteCheckbox" /> Mute</label>
+
+                <div class="dateRow">
+                    <label for="theDate">Date :</label>
+                    <input id="theDate" type="date" />
+                </div>
+
+
+                <!-- Progress bars -->
+                <div id="progressSection">
+                    <h3>Barres de progression</h3>
+                    <p>Téléchargement en cours :</p>
+                    <progress id="downloadProgress" value="0" max="100"></progress>
+                    <p>Espace disponible :</p>
+                    <progress id="spaceProgress" value="0" max="100"></progress>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+
+
+
+</main>
+
+<footer>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
