@@ -8,7 +8,6 @@ Ce projet est un TP de révision sur HTML, CSS et JavaScript. Il inclut :
 - Menu interactif pour afficher/cacher les sections
 - Barres de progression simulant un téléchargement
 - Stockage temporaire des choix (localStorage)
-- Ajout d'images et liens dynamiques
 
 ## Installation
 1. Cloner le dépôt :
